@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef2f7;
+}
+
+/* Form */
+
+form {
+    width: 480px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    border: 1px solid #d9dee7;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+/* Input fields */
+
+input {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 10px 13px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #f8fafc;
+
+    color: #1f2937;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+/* Input focus */
+
+input:focus {
+    border-color: #6366f1;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* Rating */
+
+input[type="number"] {
+    cursor: pointer;
+}
+
+/* Update button */
+
+button {
+    width: 100%;
+
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+}

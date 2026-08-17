@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'customer_dash.css' %}">
+</head>
+<body>
+  <h2>Restaurants</h2>
+<a href="{% url 'view_cart' username %}" class="cart-btn">
+    View Cart
+</a>
+  {% if restaurant_list %}
+    <div class="restaurant-grid">
+      {% for i in restaurant_list %}
+        <div class="restaurant-card">
+          <img src="{{ i.picture }}" alt="{{ i.name }}">
+
+          <h3>{{ i.name }}</h3>
+
+          <p class="meta">Cuisine: {{ i.cuisine }}</p>
+
+          <p class="meta rating">
+            Rating: {{ i.rating }}/5 ⭐
+          </p>
+          <a href="{% url 'view_menu' i.id username %}">View Menu</a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty">No Restaurant Found</p>
+  {% endif %}
+</body>
+
+        </html>

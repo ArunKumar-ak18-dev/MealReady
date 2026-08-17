@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'show_res.css' %}">
+</head>
+<body>
+   <h2>Restaurants</h2>
+
+{% if restaurent_List %}
+    {% for r in restaurent_List %}
+        <div style="margin-bottom: 12px;">
+            <h3>{{ r.name }}</h3>
+            <img src="{{ r.picture }}" width="120">
+            <p>Cuisine: {{ r.cuisine }}</p>
+            <p>Rating: {{ r.rating }}/5 ⭐</p>
+         </div name="updating">
+          <a href="{% url 'open_update_restaurant' r.id%}"> Update Restaurants</a>
+         <br>
+          <a href="{% url 'delete_restaurant' r.id%}">Delete Restaurant</a>
+          <br>
+           <a href="{% url 'open_add_items' r.id %}">Update Menu</a>
+
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No restaurants found.</p>
+{% endif %}
+
+
+</body>
+</html>
+
+
+
+

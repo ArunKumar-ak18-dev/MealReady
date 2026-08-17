@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Items</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'customer_items.css' %}">
+</head>
+
+<body>
+
+    <h2>Menu</h2>
+
+    <div class="item-grid">
+
+        {% for i in itemList %}
+
+        <div class="item-card">
+
+            <img src="{{ i.picture }}" alt="{{ i.name }}">
+
+            <h3>{{ i.name }}</h3>
+
+            <p>Item ID: {{ i.id }}</p>
+
+            <p class="rating">
+                Rating: {{ i.rating }} ⭐
+            </p>
+
+            <a href="{% url 'add_to_cart' i.id username %}">
+                Add to Cart
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

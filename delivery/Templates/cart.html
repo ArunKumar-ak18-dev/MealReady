@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cart.css' %}">
+</head>
+<body>
+    <div>
+        <div class="container">
+
+        <!-- Items -->
+        <div class="items">
+            {% for item in itemList %}
+            <div class="card">
+
+                <img src="{{ item.picture }}" alt="Food">
+
+                <div class="details">
+                    <div class="name">{{ item.name }}</div>
+                    <div class="desc">{{ item.description }}</div>
+                    <div class="price">₹{{ item.price }}</div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <h2>Order Summary</h2>
+
+            <div class="total">
+                Total: ₹{{ total_price }}
+            </div>
+            <div class="order">
+                <a href="{% url 'orders' username %}">click to order</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
