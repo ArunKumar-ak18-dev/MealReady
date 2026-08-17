@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    padding: 40px;
+}
+
+/* Page heading */
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+/* Restaurant card */
+
+.restaurant-item {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e5e9;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Image */
+
+.restaurant-item img {
+    width: 150px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-right: 25px;
+}
+
+/* Restaurant information */
+
+.restaurant-details {
+    flex: 1;
+}
+
+.restaurant-details h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.restaurant-details p {
+    margin-bottom: 7px;
+    color: #666;
+    font-size: 15px;
+}
+
+.restaurant-details .rating {
+    color: #e69b00;
+    font-weight: bold;
+}
+
+/* Buttons section */
+
+.restaurant-actions {
+    width: 170px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+/* All buttons */
+
+.restaurant-actions a {
+    display: block;
+
+    padding: 10px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+/* Update restaurant */
+
+.update-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Delete */
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+/* Update menu */
+
+.menu-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.menu-btn:hover {
+    background: #15803d;
+}
+
+/* Empty message */
+
+.empty {
+    text-align: center;
+    margin-top: 60px;
+
+    font-size: 20px;
+    color: #777;
+}
+
+/* Tablet */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .restaurant-item {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .restaurant-item img {
+        width: 220px;
+        height: 150px;
+
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .restaurant-details {
+        margin-bottom: 20px;
+    }
+
+    .restaurant-actions {
+        width: 220px;
+    }
+}
